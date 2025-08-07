@@ -21,6 +21,11 @@ except Exception as e:
 
 # --- API Endpoints ---
 
+# **NEW** Root URL to check if the server is running
+@app.route('/')
+def index():
+    return "<h1>Sahayata AI Backend is running!</h1>"
+
 # 3. API Endpoint for Diet Planner
 @app.route('/generate-diet-plan', methods=['POST'])
 def generate_diet_plan():
@@ -42,7 +47,7 @@ def generate_diet_plan():
         else:
             return jsonify({"error": "AI service temporarily unavailable. Please try again later."}), 500
 
-# 4. API Endpoint for Exercise Planner (UPDATED WITH DESCRIPTION)
+# 4. API Endpoint for Exercise Planner
 @app.route('/generate-exercise-plan', methods=['POST'])
 def generate_exercise_plan():
     if not model:
