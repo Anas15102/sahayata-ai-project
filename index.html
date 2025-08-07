@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Companion - Parent Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your new CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-20">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="text-xl sm:text-2xl font-bold text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 h-7 w-7 sm:h-8 sm:w-8"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                Sahayata AI
+            </div>
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="hidden sm:inline font-medium">Welcome, Parent!</span>
+                <img class="h-10 w-10 rounded-full object-cover" src="https://placehold.co/100x100/E2E8F0/4A5568?text=P" alt="Parent's profile picture">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+
+        <!-- Page 1: Main Dashboard -->
+        <div id="dashboard-page">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Aapka Dashboard</h1>
+            <p class="text-gray-600 mb-8">Aapke bachhe ke liye sab kuch ek jagah par.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Card 1: Fun Activity -->
+                <div class="dashboard-card bg-white rounded-xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+                    <div class="bg-orange-100 p-4 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-orange-500"><path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 19.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 19.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="m5 12.5 1.2-1.2a2.5 2.5 0 0 1 3.54 0L12 13.5l-1.2 1.2a2.5 2.5 0 0 1-3.54 0Z"></path><path d="m19 12.5-1.2-1.2a2.5 2.5 0 0 0-3.54 0L12 13.5l1.2 1.2a2.5 2.5 0 0 0 3.54 0Z"></path><path d="m12.5 5-1.2-1.2a2.5 2.5 0 0 0-3.54 0L6.5 6.5l1.2 1.2a2.5 2.5 0 0 0 3.54 0Z"></path><path d="m12.5 19-1.2-1.2a2.5 2.5 0 0 1-3.54 0L6.5 16.5l1.2 1.2a2.5 2.5 0 0 1 3.54 0Z"></path><path d="m19.5 5-1.2-1.2a2.5 2.5 0 0 0-3.54 0L13.5 5l1.2 1.2a2.5 2.5 0 0 0 3.54 0Z"></path><path d="m19.5 19-1.2-1.2a2.5 2.5 0 0 1-3.54 0L13.5 16.5l1.2 1.2a2.5 2.5 0 0 1 3.54 0Z"></path></svg></div>
+                    <h2 class="text-xl font-semibold mb-2">Fun Activity</h2>
+                    <p class="text-gray-600 mb-4">Aaj ke liye ek mazedaar activity chunein.</p>
+                    <button id="start-activity-btn" class="w-full bg-orange-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors">Find Activities</button>
+                </div>
+                <!-- Card 2: Learning Path -->
+                 <div class="dashboard-card bg-white rounded-xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+                    <div class="bg-indigo-100 p-4 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-indigo-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
+                    <h2 class="text-xl font-semibold mb-2">Learning Path</h2>
+                    <p class="text-gray-600 mb-4">AI ki help se aapke bachhe ke liye banaya gaya special path.</p>
+                    <button id="view-path-btn" class="w-full bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600 transition-colors">Create Path</button>
+                </div>
+                <!-- Card 3: Health Routine -->
+                <div class="dashboard-card bg-white rounded-xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+                    <div class="bg-green-100 p-4 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-green-500"><path d="M12 2a10 10 0 1 0 10 10c0-4.42-2.86-8.17-6.84-9.54"></path><path d="M12 12v-2"></path><path d="M12 12H9.5"></path><path d="M12 12c-2 0-4.5 2-5 4.5"></path><path d="M12 12c2 0 4.5 2 5 4.5"></path><path d="M12 12a2.5 2.5 0 0 1-2.5-2.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5A2.5 2.5 0 0 1 12 12z"></path></svg></div>
+                    <h2 class="text-xl font-semibold mb-2">Health Routine</h2>
+                    <p class="text-gray-600 mb-4">Healthy diet aur exercise plan dekhein.</p>
+                    <button id="health-routine-btn" class="w-full bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">View Routine</button>
+                </div>
+                 <!-- Card 4: Counselor Connect -->
+                <div class="dashboard-card bg-white rounded-xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+                    <div class="bg-purple-100 p-4 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-purple-500"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><path d="M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path><path d="M21 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path></svg></div>
+                    <h2 class="text-xl font-semibold mb-2">Counselor Connect</h2>
+                    <p class="text-gray-600 mb-4">Expert counselor se salah lein aur progress share karein.</p>
+                    <button id="counselor-connect-btn" class="w-full bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors">Connect Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Activities Page (Initially Hidden) -->
+        <div id="activity-page" class="hidden">
+            <button class="back-btn mb-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>Back to Dashboard</button>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <section class="bg-white rounded-xl shadow-lg p-6">
+                     <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-orange-100 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-orange-500"><path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 19.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 19.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="m5 12.5 1.2-1.2a2.5 2.5 0 0 1 3.54 0L12 13.5l-1.2 1.2a2.5 2.5 0 0 1-3.54 0Z"></path><path d="m19 12.5-1.2-1.2a2.5 2.5 0 0 0-3.54 0L12 13.5l1.2 1.2a2.5 2.5 0 0 0 3.54 0Z"></path><path d="m12.5 5-1.2-1.2a2.5 2.5 0 0 0-3.54 0L6.5 6.5l1.2 1.2a2.5 2.5 0 0 0 3.54 0Z"></path><path d="m12.5 19-1.2-1.2a2.5 2.5 0 0 1-3.54 0L6.5 16.5l1.2 1.2a2.5 2.5 0 0 1 3.54 0Z"></path><path d="m19.5 5-1.2-1.2a2.5 2.5 0 0 0-3.54 0L13.5 5l1.2 1.2a2.5 2.5 0 0 0 3.54 0Z"></path><path d="m19.5 19-1.2-1.2a2.5 2.5 0 0 1-3.54 0L13.5 16.5l1.2 1.2a2.5 2.5 0 0 1 3.54 0Z"></path></svg></div>
+                        <div class="flex-grow"><h2 class="text-xl font-bold">Find Fun Activities</h2><p class="text-gray-600">Select a condition to get AI suggestions.</p></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="condition-select" class="block text-sm font-medium text-gray-700">Child's Primary Condition</label>
+                            <select id="condition-select" class="mt-1 block w-full form-input-styled">
+                                <option>ADHD</option><option>Autism</option><option>Dyslexia</option><option>Visual Impairment</option>
+                            </select>
+                        </div>
+                        <div>
+                             <button id="generate-activities-btn" class="w-full mt-2 px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700 flex items-center justify-center gap-2">Generate Activities</button>
+                        </div>
+                    </div>
+                </section>
+                <section id="fun-activities-results" class="bg-white rounded-xl shadow-lg p-6">
+                     <div class="text-center text-gray-500 h-full flex flex-col justify-center">
+                        <h3 class="text-xl font-bold text-gray-800">Activity Ideas</h3>
+                        <p class="mt-2">Personalized activities will appear here.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Page 3: Learning Path Page (Initially Hidden) -->
+        <div id="learning-path-page" class="hidden">
+             <button class="back-btn mb-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>Back to Dashboard</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section class="bg-white rounded-xl shadow-lg p-6">
+                     <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-indigo-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
+                        <div class="flex-grow"><h2 class="text-xl font-bold">Personalized Learning Path</h2><p class="text-gray-600">Tell us about the learner, and our AI will craft a unique journey.</p></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div><label for="child-name-input" class="block text-sm font-medium text-gray-700">Child's Name</label><input type="text" id="child-name-input" placeholder="e.g., Alex" class="mt-1 block w-full form-input-styled"></div>
+                        <div><label for="learning-needs-input" class="block text-sm font-medium text-gray-700">Learning Needs</label><textarea id="learning-needs-input" rows="3" class="mt-1 block w-full form-input-styled" placeholder="e.g., Needs help with multiplication and reading."></textarea></div>
+                        <div><label for="learning-style-select" class="block text-sm font-medium text-gray-700">Preferred Learning Style</label><select id="learning-style-select" class="mt-1 block w-full form-input-styled"><option>Visual (learns by seeing)</option><option>Auditory (learns by hearing)</option><option>Kinesthetic (learns by doing/touching)</option><option>Reading/Writing</option></select></div>
+                        <div><label for="focus-subjects-input" class="block text-sm font-medium text-gray-700">Focus Subjects</label><input type="text" id="focus-subjects-input" placeholder="e.g., Math, English" class="mt-1 block w-full form-input-styled"></div>
+                         <div><label for="progress-summary-input" class="block text-sm font-medium text-gray-700">Progress Summary (Optional)</label><textarea id="progress-summary-input" rows="2" class="mt-1 block w-full form-input-styled" placeholder="e.g., Has mastered basic addition."></textarea></div>
+                        <div><button id="generate-path-btn" class="w-full mt-2 px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M12 2a10 10 0 1 0 10 10c0-4.42-2.86-8.17-6.84-9.54"></path><path d="m22 2-2.5 2.5"></path><path d="m2 22 2.5-2.5"></path><path d="M12 6V2"></path><path d="M12 22v-4"></path><path d="M20 12h4"></path><path d="M2 12h4"></path></svg>Generate Path</button></div>
+                    </div>
+                </section>
+                <section id="learning-path-results" class="bg-white rounded-xl shadow-lg p-6"><div class="text-center text-gray-500 h-full flex flex-col justify-center"><h3 class="text-xl font-bold text-gray-800">The Adventure Ahead</h3><p class="mt-2">Your personalized learning path will appear here once you provide the details.</p></div></section>
+            </div>
+        </div>
+
+        <!-- Page 4: Health Routine Page (Initially Hidden) -->
+        <div id="health-routine-page" class="hidden">
+            <button class="back-btn mb-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>Back to Dashboard</button>
+            <div id="health-choice-screen">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Health Routine Hub</h1>
+                <p class="text-gray-600 mb-8">Choose a routine to plan for your child.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div id="choose-diet-card" class="dashboard-card cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+                        <div class="bg-green-100 p-4 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-green-500"><path d="M12 2a10 10 0 1 0 10 10c0-4.42-2.86-8.17-6.84-9.54"></path><path d="M12 12v-2"></path><path d="M12 12H9.5"></path><path d="M12 12c-2 0-4.5 2-5 4.5"></path><path d="M12 12c2 0 4.5 2 5 4.5"></path><path d="M12 12a2.5 2.5 0 0 1-2.5-2.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5A2.5 2.5 0 0 1 12 12z"></path></svg></div>
+                        <h2 class="text-2xl font-semibold">AI Diet Planner</h2><p class="text-gray-600">Get healthy recipes from ingredients you have.</p>
+                    </div>
+                    <div id="choose-exercise-card" class="dashboard-card cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+                        <div class="bg-teal-100 p-4 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-teal-500"><path d="M4.5 10.5c-2.5 0-4.5 2-4.5 4.5v0c0 2.5 2 4.5 4.5 4.5v0c2.5 0 4.5-2 4.5-4.5v0c0-2.5-2-4.5-4.5-4.5Z"></path><path d="M7 15h10"></path><path d="m17 15 4-4"></path><path d="m21 15-4-4"></path><path d="M4.5 4.5c2.5 0 4.5-2 4.5-4.5v0c0-2.5-2-4.5-4.5-4.5v0c-2.5 0-4.5 2-4.5 4.5v0c0 2.5 2 4.5 4.5 4.5Z"></path></svg></div>
+                        <h2 class="text-2xl font-semibold">AI Exercise Planner</h2><p class="text-gray-600">Create a fun and simple workout routine.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="diet-planner-section" class="hidden">
+                <button class="back-to-health-choice-btn mb-6 inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>Back to Health Choices</button>
+                <section class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-4 mb-4"><div class="bg-green-100 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-green-500"><path d="M12 2a10 10 0 1 0 10 10c0-4.42-2.86-8.17-6.84-9.54"></path><path d="M12 12v-2"></path><path d="M12 12H9.5"></path><path d="M12 12c-2 0-4.5 2-5 4.5"></path><path d="M12 12c2 0 4.5 2 5 4.5"></path><path d="M12 12a2.5 2.5 0 0 1-2.5-2.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5A2.5 2.5 0 0 1 12 12z"></path></svg></div><h2 class="text-xl font-bold">AI Diet Planner</h2></div>
+                    <p class="text-gray-600 mb-4">Ghar par available ingredients batayein aur AI se healthy recipe paayein.</p>
+                    <div class="flex gap-2"><input type="text" id="ingredients-input" placeholder="e.g., roti, sabzi, dal" class="flex-grow block w-full form-input-styled"><button id="generate-diet-btn" class="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">Generate</button></div>
+                    <div id="diet-results" class="mt-6"></div>
+                </section>
+            </div>
+            <div id="exercise-planner-section" class="hidden">
+                <button class="back-to-health-choice-btn mb-6 inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>Back to Health Choices</button>
+                <section class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center gap-4 mb-4"><div class="bg-teal-100 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-teal-500"><path d="M4.5 10.5c-2.5 0-4.5 2-4.5 4.5v0c0 2.5 2 4.5 4.5 4.5v0c2.5 0 4.5-2 4.5-4.5v0c0-2.5-2-4.5-4.5-4.5Z"></path><path d="M7 15h10"></path><path d="m17 15 4-4"></path><path d="m21 15-4-4"></path><path d="M4.5 4.5c2.5 0 4.5-2 4.5-4.5v0c0-2.5-2-4.5-4.5-4.5v0c-2.5 0-4.5 2-4.5 4.5v0c0 2.5 2 4.5 4.5 4.5Z"></path></svg></div><h2 class="text-xl font-bold">AI Exercise Planner</h2></div>
+                    <p class="text-gray-600 mb-4">Ek fun aur easy exercise routine ke liye duration select karein.</p>
+                    <div class="flex gap-2">
+                        <select id="exercise-duration-select" class="flex-grow block w-full form-input-styled"><option value="5">5 Minutes</option><option value="10">10 Minutes</option><option value="15">15 Minutes</option></select>
+                        <button id="generate-exercise-btn" class="px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700">Generate</button>
+                    </div>
+                    <div id="exercise-results" class="mt-6"></div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Page 5: Counselor Page (Initially Hidden) -->
+        <div id="counselor-page" class="hidden">
+            <button class="back-btn mb-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>Back to Dashboard</button>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Connect with a Counselor</h1>
+            <p class="text-gray-600 mb-8">Find the right expert to support you and your child.</p>
+            <div id="counselor-list" class="space-y-6"></div>
+        </div>
+
+    </main>
+    
+    <!-- Booking Confirmation Modal -->
+    <div id="booking-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30" >
+        <div class="bg-white rounded-lg shadow-xl p-8 max-w-sm mx-auto">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4"><svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Appointment Booked!</h3>
+                <div class="mt-2 px-7 py-3"><p class="text-sm text-gray-500" id="modal-text">Your session has been confirmed. You will receive an email with the details.</p></div>
+                <div class="mt-4"><button id="close-modal-btn" class="px-4 py-2 bg-indigo-600 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-indigo-700">OK</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your new JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
